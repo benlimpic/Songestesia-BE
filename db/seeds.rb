@@ -49,12 +49,41 @@ spicy = Taste.create(name: "Spicy", emoji: "🌶")
 bitter = Taste.create(name: "Bitter", emoji: "🍺")
 
 #songs
-song = 25.times do
-song = Song.create(
-    song_name: "#{Faker::Superhero.prefix} #{Faker::Artist.name}" , 
+# 25.times do
+#     song = Song.create(
+#         song_name: "#{Faker::Superhero.prefix} #{Faker::Artist.name}" , 
+#         artist_name: Faker::Music.band, 
+#         genre: Faker::Music.genre)
+# end
+song1 = Song.create(
+    song_name: Faker::Music::RockBand.song, 
     artist_name: Faker::Music.band, 
     genre: Faker::Music.genre)
-end
+
+song2 = Song.create(
+    song_name: Faker::Music::RockBand.song, 
+    artist_name: Faker::Music.band, 
+    genre: Faker::Music.genre)
+
+song3 = Song.create(
+    song_name: Faker::Music::RockBand.song, 
+    artist_name: Faker::Music.band, 
+    genre: Faker::Music.genre)
+
+song4 = Song.create(
+    song_name: Faker::Music::RockBand.song, 
+    artist_name: Faker::Music.band, 
+    genre: Faker::Music.genre)
+
+song5 = Song.create(
+    song_name: Faker::Music::RockBand.song, 
+    artist_name: Faker::Music.band, 
+    genre: Faker::Music.genre)
+
+song6 = Song.create(
+    song_name: Faker::Music::RockBand.song, 
+    artist_name: Faker::Music.band, 
+    genre: Faker::Music.genre)
 
 50.times do
     song = Song.create(
@@ -63,19 +92,13 @@ end
         genre: Faker::Music.genre)
     end
 
-25.times do
-song = Song.create(
-    song_name: "#{Faker::Superhero.descriptor} #{Faker::Fantasy::Tolkien.character}" , 
-    artist_name: Faker::Music.band, 
-    genre: Faker::Music.genre)
-end
 
-Entry.create(song_id: song.id, color_id: red.id, animal_id: squid.id, taste_id: meaty.id, smell_id: smokey.id)
-Entry.create(song_id: song.id, color_id: pink.id, animal_id: unicorn.id, taste_id: bitter.id, smell_id: citrus.id)
-Entry.create(song_id: song.id, color_id: green.id, animal_id: t_rex.id, taste_id: salty.id, smell_id: death.id)
-Entry.create(song_id: song.id, color_id: orange.id, animal_id: dog.id, taste_id: sweet.id, smell_id: wood.id)
-Entry.create(song_id: song.id, color_id: yellow.id, animal_id: parrot.id, taste_id: wine.id, smell_id: pine.id)
-Entry.create(song_id: song.id, color_id: purple.id, animal_id: fish.id, taste_id: minty.id, smell_id: soap.id)
+Entry.create(song_id: song1.id, color_id: red.id, animal_id: squid.id, taste_id: meaty.id, smell_id: smokey.id)
+Entry.create(song_id: song2.id, color_id: pink.id, animal_id: unicorn.id, taste_id: bitter.id, smell_id: citrus.id)
+Entry.create(song_id: song3.id, color_id: green.id, animal_id: t_rex.id, taste_id: salty.id, smell_id: death.id)
+Entry.create(song_id: song4.id, color_id: orange.id, animal_id: dog.id, taste_id: sweet.id, smell_id: wood.id)
+Entry.create(song_id: song5.id, color_id: yellow.id, animal_id: parrot.id, taste_id: wine.id, smell_id: pine.id)
+Entry.create(song_id: song6.id, color_id: purple.id, animal_id: fish.id, taste_id: minty.id, smell_id: soap.id)
 
 
 puts "Looks like they stuck!"
