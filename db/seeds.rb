@@ -47,7 +47,7 @@ Taste.create(name: "Wine", emoji: "🍷")
 Taste.create(name: "Minty", emoji: "🪥")
 Taste.create(name: "Spicy", emoji: "🌶")
 Taste.create(name: "Bitter", emoji: "🍺")
-Taste.create(name: "Whats going on here!", emoji: "🍺")
+
 #songs
 25.times do
 song = Song.create(
