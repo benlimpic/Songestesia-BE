@@ -4,7 +4,7 @@ puts "Throwing some seeds..."
 
 
 #colors
-Color.create(name: "Red", emoji: "🔴")
+red = Color.create(name: "Red", emoji: "🔴")
 Color.create(name: "Orange", emoji: "🟠")
 Color.create(name: "Yellow", emoji: "🟡")
 Color.create(name: "Green", emoji: "🟢")
@@ -15,7 +15,7 @@ Color.create(name: "Black", emoji: "⚫")
 Color.create(name: "White", emoji: "⚪")
 Color.create(name: "Pink", emoji: "🌸")
 #animals
-Animal.create(name: "Squid", emoji: "🦑")
+squid = Animal.create(name: "Squid", emoji: "🦑")
 Animal.create(name: "T-Rex", emoji: "🦖")
 Animal.create(name: "Sloth", emoji: "🦥")
 Animal.create(name: "Dog", emoji: "🐶")
@@ -26,7 +26,7 @@ Animal.create(name: "Parrot", emoji: "🦜")
 Animal.create(name: "Fish", emoji: "🐠")
 Animal.create(name: "Bee", emoji: "🐝")
 #smells
-Smell.create(name: "Smokey", emoji: "🚬")
+smokey = Smell.create(name: "Smokey", emoji: "🚬")
 Smell.create(name: "Pine", emoji: "🌲")
 Smell.create(name: "Soap", emoji: "🧼")
 Smell.create(name: "Poo", emoji: "💩")
@@ -37,7 +37,7 @@ Smell.create(name: "Herbs", emoji: "🌿")
 Smell.create(name: "Citrus", emoji: "🍊")
 Smell.create(name: "Fresh", emoji: "🧖")
 #tastes
-Taste.create(name: "Meaty", emoji: "🥩")
+meaty = Taste.create(name: "Meaty", emoji: "🥩")
 Taste.create(name: "Salty", emoji: "🧂")
 Taste.create(name: "Umami", emoji: "🍄")
 Taste.create(name: "Sweet", emoji: "🍭")
@@ -49,7 +49,7 @@ Taste.create(name: "Spicy", emoji: "🌶")
 Taste.create(name: "Bitter", emoji: "🍺")
 Taste.create(name: "Whats going on here!", emoji: "🍺")
 #songs
-25.times do
+song = 25.times do
 song = Song.create(
     song_name: "#{Faker::Superhero.prefix} #{Faker::Artist.name}" , 
     artist_name: Faker::Music.band, 
@@ -69,5 +69,7 @@ song = Song.create(
     artist_name: Faker::Music.band, 
     genre: Faker::Music.genre)
 end
+
+Entry.create(song_id: song.id, color_id: red.id, animal_id: squid.id, taste_id: meaty.id, smell_id: smokey.id)
 
 puts "Looks like they stuck!"
