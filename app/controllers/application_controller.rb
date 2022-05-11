@@ -14,11 +14,11 @@ class ApplicationController < Sinatra::Base
 
   post '/entries' do 
     entry = Entry.create(
-      song_name: params[:song_name],
-      song_link: params[:song_link],
-      comment: params[:comment],
-      color_id: param[:color_id],
-      weather_id: params[:weather_id]
+      song_name: params[:song_id],
+      animal_id: param[:animal_id],
+      taste_id: param[:taste_id],
+      smell_id: param[:smell_id],
+      color_id: param[:color_id]
     )
     entry.to_json
   end 

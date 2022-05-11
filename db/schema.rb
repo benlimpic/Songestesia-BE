@@ -10,22 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_10_151537) do
+ActiveRecord::Schema.define(version: 2022_05_11_045755) do
 
-  create_table "colors", force: :cascade do |t|
-    t.string "color"
+  create_table "Animals", force: :cascade do |t|
+    t.string "emoji"
+    t.string "name"
+  end
+
+  create_table "Colors", force: :cascade do |t|
+    t.string "emoji"
+    t.string "name"
+  end
+
+  create_table "Smells", force: :cascade do |t|
+    t.string "emoji"
+    t.string "name"
+  end
+
+  create_table "Songs", force: :cascade do |t|
+    t.string "song_name"
+    t.string "artist_name"
+    t.string "genre"
+  end
+
+  create_table "Tastes", force: :cascade do |t|
+    t.string "emoji"
+    t.string "name"
   end
 
   create_table "entries", force: :cascade do |t|
-    t.string "song_name"
-    t.string "song_link"
-    t.string "comment"
+    t.integer "song_id"
     t.integer "color_id"
-    t.integer "weather_id"
-  end
-
-  create_table "weathers", force: :cascade do |t|
-    t.string "type_of_weather"
+    t.integer "animal_id"
+    t.integer "taste_id"
+    t.integer "smell_id"
   end
 
 end
