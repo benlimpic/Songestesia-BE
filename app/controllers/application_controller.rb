@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
 
   get "/entries" do
     entries = Entry.all
-    entries.to_json
+    entries.to_json(include: [:color, :song, :animal, :taste, :smell])
   end
 
   get "/animals" do
