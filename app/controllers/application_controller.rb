@@ -55,9 +55,13 @@ class ApplicationController < Sinatra::Base
 
   patch '/entries/:id' do
     entry = Entry.find(params[:id])
-    # entry.update(
-    #   #whatever we want to update
-    # )
+    entry.update(
+      song_id: params[:song_id],
+      animal_id: params[:animal_id],
+      taste_id: params[:taste_id],
+      smell_id: params[:smell_id],
+      color_id: params[:color_id]
+    )
     entry.to_json
   end 
 
