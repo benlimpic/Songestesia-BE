@@ -17,10 +17,10 @@ class ApplicationController < Sinatra::Base
     songs.to_json
   end
 
-  # get "/songs" do
-  #   songs = Song.all
-  #   songs.to_json
-  # end
+  get "/songs" do
+    songs = Song.all.limit(50)
+    songs.to_json
+  end
 
   get "/tastes" do
     taste = Taste.all
